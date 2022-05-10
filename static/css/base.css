@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div#Navbar_fullActivity{
+    width: 100vw;
+    height: 20vh;
+    background-color: #00acc1;
+} 
+
+div#small_navActivity{
+    justify-content: space-around;
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    background-color: #02a3b6;
+    align-items: center;
+    
+} 
+
+
+div#main_div2{
+    border-top: 1px solid rgba(183, 180, 180, 0.971);
+    height: 14.5vh;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.Xstore_pattern{
+    font-size: 3em;
+}
+
+
+.search {
+  width: 37vw;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 50px;
+  /* border-radius: 5px 0 0 5px; */
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 50px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  /* border-radius: 0 5px 5px 0; */
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.element_section{
+    display: flex; list-style: none; margin-right: 320px;
+}
+.element_section li{
+    margin-left: 32px;
+    /* font-family:Montserrat; */
+    font-weight: 500;
+}
+.element_section li:hover{
+    border-top:2px solid white ;
+    /* padding: 3rem; */
+}
+.element_section>li>a{
+    text-decoration: none;
+    color: white;
+  }
+  
+#All-dipartment{
+    display: flex;
+    align-items: center;
+    margin-left: 9rem;
+    padding: 5px;
+    width: 260px;
+    height: 10vh;
+    border-left: 1px solid #00acc1;
+    border-right: 1px solid #00acc1;
+    /* border-left:1px solid rgb(165, 165, 237) ; */
+}
+
+
+/* header css end now */

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+{% load static %}
+    <link rel="stylesheet" href='{% static 'css/login.css' %}'>
+
+{% endblock head %}
+
+{% block body %}
+
+<p class="register">Login Now </p>
+   <div style="margin-left:450px; margin-top:100px; color: black;">
+        <form id="Signup-form" method="post" action="/login/" >
+            {% csrf_token %}
+            <label for="loginusername">Enter Username</label><br>
+            <input class="inputboxes" type="text" id="loginusername" name="loginusername"> <br><br>
+            <label for="loginpass">Enter Your password</label><br>
+            <input class="inputboxes" type="password" id="loginpass" name="loginpass">  
+            <br><br>
+            <button class="Sign-submitBtn" type="submit">Login Now</button>
+        </form>
+    </div>
+ 
+    {% for message in messages %}
+
+    <div style="margin-left:450px; color:black; margin-top:50px;" class="alert alert-{{ message.tags }} alert-dismissible" role="alert">
+        <strong>Message:</strong> <span style="color:green;">{{ message }}</span>
+      </div>
+
+    {% endfor %}
+
+
+<div id="Browser_Activity">
+    <h1 style="font-size: 50px; color: #00acc1;"><span style="color: #00acc1;">X</span>STORE</h1>
+    <div class="New_Arrival">
+        <ul class="xstorelinks">
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact US</a></li>
+            <li><a href="">Delivery Info</a></li>
+            <li><a href="">Career</a></li>
+            <li><a href="">Terms of Use</a></li>
+        </ul>
+    </div>
+</div>
+<hr style="width: 85vw;margin:auto;justify-self: center;">
+
+<div  class="textwidget">
+    Copyright © 2021 <a href="https://xstore.8theme.com/">XStore Theme</a>. Created by 8theme - <a href="https://www.8theme.com/">Premium WooCommerce Themes</a>.
+</div>
+
+{% endblock body %}
+
+

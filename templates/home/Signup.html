@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+{% load static %}
+    <link rel="stylesheet" href='{% static 'css/signup.css' %}'>
+
+{% endblock head %}
+
+{% block body %}
+
+<p class="register">Register Now </p>
+   <div style="margin-left:450px; margin-top:100px; color: black;">
+        <form id="Signup-form" method="post" action="/signup/" >
+            {% csrf_token %}
+            <label for="username">Username</label><br>
+            <input class="inputboxes" type="text" id="username" name="username"> <br><br>
+            <label for="fname">First Name</label><br>
+            <input class="inputboxes" type="text" id="fname" name="fname"> <br><br>
+            <label for="lname">Last Name</label><br>
+            <input class="inputboxes" type="text" id="lname" name="lname"> <br><br>
+            {% comment %} <label for="phone"> Phone</label><br>
+            <input class="inputboxes" type="text" id="phone" name="phone"> <br><br> {% endcomment %}
+            <label for="email">Email</label><br>
+            <input class="inputboxes" type="text" id="email" name="email"><br><br>
+            <label for="pass">Create Your password</label><br>
+            <input class="inputboxes" type="password" id="pass1" name="pass1">  
+            <br><br>
+            <button class="Sign-submitBtn" type="submit">Sign Up</button>
+        </form>
+    </div>
+ 
+    {% for message in messages %}
+
+    <div style="margin-left:450px; color:black; margin-top:50px;" class="alert alert-{{ message.tags }} alert-dismissible" role="alert">
+        <strong>Message:</strong> <span style="color:green;">{{ message }}</span>
+      </div>
+
+    {% endfor %}
+
+
+<div id="Browser_Activity">
+    <h1 style="font-size: 50px; color: #00acc1;"><span style="color: #00acc1;">X</span>STORE</h1>
+    <div class="New_Arrival">
+        <ul class="xstorelinks">
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact US</a></li>
+            <li><a href="">Delivery Info</a></li>
+            <li><a href="">Career</a></li>
+            <li><a href="">Terms of Use</a></li>
+        </ul>
+    </div>
+</div>
+<hr style="width: 85vw;margin:auto;justify-self: center;">
+
+<div  class="textwidget">
+    Copyright © 2021 <a href="https://xstore.8theme.com/">XStore Theme</a>. Created by 8theme - <a href="https://www.8theme.com/">Premium WooCommerce Themes</a>.
+</div>
+
+{% endblock body %}
+
+

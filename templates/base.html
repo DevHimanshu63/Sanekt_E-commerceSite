@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/972c9d1cda.js" crossorigin="anonymous"></script>
+    {% comment %} <link rel="stylesheet" href="header.css"> {% endcomment %}
+    {% load static %}
+    <link rel="stylesheet" href='{% static 'css/base.css' %}'>
+    {% block head %}
+    
+    {% endblock head %}
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="Navbar_fullActivity">
+                <!-- 1st section of navbar -->
+                <div id="main_div1">
+                    <!-- <div id="first_half">
+                        <ul class="ul#first_half">
+                            <li>English <i class="fa-solid fa-angle-down"></i>&nbsp;&nbsp;&nbsp;|</li>
+                            <li> USD <i class="fa-solid fa-angle-down"></i> &nbsp;&nbsp;|</li>
+                            <li><i class="fa-solid fa-phone-volume"></i> Order online or call us (+1800)000 8808 &nbsp;|
+                            </li>
+                            <li><i class="fa-solid fa-globe"></i> East 21st Street New York </li>
+
+                        </ul>
+                    </div> -->
+
+                    <div id="second_half" style="display: flex; justify-content: center;  list-style: none;">
+                        {% if user.is_authenticated %}
+                        <ul class="ul#first_half">
+                            <li><i class="fa-solid fa-user"></i> <a style="text-decoration:none; color:white;" href="/logout"><span style="color:black;">Welcome </span>{{request.user}}</a>
+                                {% else %}
+                                <li><i class="fa-solid fa-user"></i> <a style="text-decoration:none; color:white;" href="/login">Login</a> / <a style="text-decoration:none; color:white;" href="/signup">Sign Up</a> &nbsp;|</li>
+
+                                <li style="margin-left:5px;">    
+                                    <i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;
+                                    <i class="fa-brands fa-twitter"></i>&nbsp;&nbsp;&nbsp;
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </li>
+                            </ul>
+                            {% endif %}
+
+                    </div>
+
+                </div>
+                <!-- <hr> -->
+                <!-- 2nd section of navbar -->
+                <div id="main_div2"  style="margin-top:5px;">
+                    <div class="Xstore_pattern">
+                        <span>X</span><span>STORE</span>
+                    </div>
+
+                    <div class="wrap">
+                        <div>
+                            <span>Add anything you want via Header Builder</span>
+                        </div>
+                        <div class="search" style="margin-top: 15px;">
+                            <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                            <button type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="wish_cart_list">
+                        <ul style="display: flex; list-style: none; font-size: 20px;">
+                            <li><i class="fa-regular fa-heart"></i><i class="fa-solid fa-circle-0"></i>Wishlist |</li>
+                            <li><i class="fa-solid fa-cart-shopping"></i><i
+                                    class="fa-solid fa-circle-0"></i><span>(<span>&#8377;</span>0.00)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="small_navActivity">
+                <div id="All-dipartment">
+                    <i class="fa-solid fa-bars"></i>
+                    <span style="margin-left: 10px;">All departments</span>
+                    <i class="fa-solid fa-angle-down" style="margin-left: 70px;"></i>
+                </div>
+                <div class="border_Activity">
+                    <ul class="element_section">
+                        <li><a href="/home">Home</a></li>
+                        <li>Spy Camera</li>
+                        <li>Demos</li>
+                        <li>Shop</li>
+                        <li><i class="fa-solid fa-gift"></i><a href="offer.html">Offer</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="/contact">Contact us</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {% block body %}
+    {% endblock body %}
+</body>
+</html>

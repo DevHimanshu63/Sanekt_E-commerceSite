@@ -1,0 +1,412 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% load static %}
+    <link rel="stylesheet" href='{% static 'css/contact.css' %}'>
+
+{% endblock head %}
+
+{% block body %}
+<div id="ContactPage">
+    <h2>Contact Us</h2>
+    <p style="margin-top: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt magna aliqua.</p>
+    <div style="margin-top: 40px;">
+        <img src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/05/adress-icon.png"
+            alt="">
+        <p style="display: inline;" class="elementor"><span
+                style="color: #999999; font-weight: 400;">Adress:</span><b> 77a First Street, London, UK</b></p>
+        <br> <br>
+        <img src="https://xstore-5-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/05/phone-icon.png"
+            alt="">
+        <p style="display: inline;" class="elementor"><span
+                style="color: #999999; font-weight: 400;">Phone:</span><b> +300 98 75 532, +300 22 33 444</b>
+        </p>
+        <br><br>
+        <img src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/05/email-icon.png"
+            alt="">
+        <p style="display: inline;" class="elementor"><span style="color: #999999; font-weight: 400;">Email: </span>
+            <b> xstore@gmail.com </b></p>
+    </div>
+</div>
+
+<div style="display: flex;">
+<div class="contact_form">
+    <h1>Contact form</h1>
+    <p>There are many variations of passages of brands available.</p>
+
+    <div class="form">
+        <form method="post" action="/contact/">
+            {% csrf_token %}
+            <input type="text" name="Name" id="Name" placeholder="Your Name(required)"><br>
+            <input type="text" name="email" id="email" placeholder="Your Mail(required)"><br>
+            <input type="text" name="subject" id="subject" placeholder="Subject"><br>
+            <textarea style="margin-left: 10px; padding: 20px;" name="desc" id="desc" cols="67" rows="15"
+                placeholder="Your Message"></textarea><br>
+            <button type="submit" id="send_message">SEND MESSAGE</button>
+        </form>
+    </div>
+    {% for message in messages %}
+
+    <div style="margin-left:10px; color:black; margin-top:50px;" class="alert alert-{{ message.tags }} alert-dismissible" role="alert">
+        <strong>Message:</strong> <span style="color:green;">{{ message }}</span>
+      </div>
+    {% endfor %}
+
+</div>
+
+<div class="support_center">
+    <h1> 24 / Support Center</h1>
+    <p>There are many variations of passages of brands available.</p>
+    <div style="display: flex; margin-top: 40px;">
+        <div>
+            <img src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/phone-icon.png"
+                alt="">
+        </div>
+        <div style="margin-left: 20px;">
+            <h3 class="elementor-image-box-title">Hot Line To Call:</h3>
+            <p style="color: #02a3b6; font-size: 30px;" class="elementor-image-box-description">1-300-400-8211</p>
+        </div>
+    </div>
+    <h1 style="margin-top:20px;"> Instagram Feed</h1>
+    <p>There are many variations of passages of brands available.</p>
+
+
+</div>
+</div>
+
+
+
+<!-- letest product -->
+<div id="letest_products" style="display: flex;">
+
+<div>
+    <div class="main_products" style="margin-top: 30px;">
+        <div style="color: black; margin-left: 50px;">
+            <h3>Latest Products</h3>
+            <hr width="250px">
+        </div>
+
+        <div class="products">
+            <div>
+                <img width="70px"
+                    src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                    alt="">
+            </div>
+            <div style="color: black;">
+                <p>DJI phantum 4</p>
+                <img width="80px"
+                    src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                    alt=""><br>
+                <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+            </div>
+        </div>
+    </div>
+    <div class="main_products">
+
+        <div class="products">
+            <div>
+                <img width="70px"
+                    src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                    alt="">
+            </div>
+            <div style="color: black;">
+                <p>DJI phantum 4</p>
+                <img width="80px"
+                    src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                    alt=""><br>
+                <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+            </div>
+        </div>
+    </div>
+    <div class="main_products">
+        <div class="products">
+            <div>
+                <img width="70px"
+                    src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                    alt="">
+            </div>
+            <div style="color: black;">
+                <p>DJI phantum 4</p>
+                <img width="80px"
+                    src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                    alt=""><br>
+                <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+            </div>
+        </div>
+    </div>
+    <div class="main_products">
+
+        <div class="products">
+            <div>
+                <img width="70px"
+                    src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                    alt="">
+            </div>
+            <div style="color: black;">
+                <p>DJI phantum 4</p>
+                <img width="80px"
+                    src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                    alt=""><br>
+                <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="products">
+    <div>
+        <div class="main_products">
+            <div style="color: black; margin-left: 50px;">
+                <h3>Latest Products</h3>
+                <hr width="250px">
+            </div>
+
+            <div class="products">
+                <div>
+                    <img width="70px"
+                        src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                        alt="">
+                </div>
+                <div style="color: black;">
+                    <p>DJI phantum 4</p>
+                    <img width="80px"
+                        src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                        alt=""><br>
+                    <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+                </div>
+            </div>
+        </div>
+        <div class="main_products">
+
+            <div class="products">
+                <div>
+                    <img width="70px"
+                        src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                        alt="">
+                </div>
+                <div style="color: black;">
+                    <p>DJI phantum 4</p>
+                    <img width="80px"
+                        src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                        alt=""><br>
+                    <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+                </div>
+            </div>
+        </div>
+        <div class="main_products">
+            <div class="products">
+                <div>
+                    <img width="70px"
+                        src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                        alt="">
+                </div>
+                <div style="color: black;">
+                    <p>DJI phantum 4</p>
+                    <img width="80px"
+                        src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                        alt=""><br>
+                    <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+                </div>
+            </div>
+        </div>
+        <div class="main_products">
+
+            <div class="products">
+                <div>
+                    <img width="70px"
+                        src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                        alt="">
+                </div>
+                <div style="color: black;">
+                    <p>DJI phantum 4</p>
+                    <img width="80px"
+                        src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                        alt=""><br>
+                    <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="products">
+    <div>
+        <div class="main_products">
+            <div style="color: black;  margin-left: 50px;">
+                <h3>Latest Products</h3>
+                <hr width="250px">
+            </div>
+
+            <div class="products">
+                <div>
+                    <img width="70px"
+                        src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                        alt="">
+                </div>
+                <div style="color: black;">
+                    <p>DJI phantum 4</p>
+                    <img width="80px"
+                        src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                        alt=""><br>
+                    <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+                </div>
+            </div>
+        </div>
+        <div class="main_products">
+
+            <div class="products">
+                <div>
+                    <img width="70px"
+                        src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                        alt="">
+                </div>
+                <div style="color: black;">
+                    <p>DJI phantum 4</p>
+                    <img width="80px"
+                        src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                        alt=""><br>
+                    <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+                </div>
+            </div>
+        </div>
+        <div class="main_products">
+            <div class="products">
+                <div>
+                    <img width="70px"
+                        src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                        alt="">
+                </div>
+                <div style="color: black;">
+                    <p>DJI phantum 4</p>
+                    <img width="80px"
+                        src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                        alt=""><br>
+                    <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+                </div>
+            </div>
+        </div>
+        <div class="main_products">
+
+            <div class="products">
+                <div>
+                    <img width="70px"
+                        src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                        alt="">
+                </div>
+                <div style="color: black;">
+                    <p>DJI phantum 4</p>
+                    <img width="80px"
+                        src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                        alt=""><br>
+                    <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="products">
+    <div>
+        <div class="main_products">
+            <div style="color: black;  margin-left: 50px;">
+                <h3>Latest Products</h3>
+                <hr width="250px">
+            </div>
+
+            <div class="products">
+                <div>
+                    <img width="70px"
+                        src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                        alt="">
+                </div>
+                <div style="color: black;">
+                    <p>DJI phantum 4</p>
+                    <img width="80px"
+                        src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                        alt=""><br>
+                    <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+                </div>
+            </div>
+        </div>
+        <div class="main_products">
+
+            <div class="products">
+                <div>
+                    <img width="70px"
+                        src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                        alt="">
+                </div>
+                <div style="color: black;">
+                    <p>DJI phantum 4</p>
+                    <img width="80px"
+                        src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                        alt=""><br>
+                    <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+                </div>
+            </div>
+        </div>
+        <div class="main_products">
+            <div class="products">
+                <div>
+                    <img width="70px"
+                        src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                        alt="">
+                </div>
+                <div style="color: black;">
+                    <p>DJI phantum 4</p>
+                    <img width="80px"
+                        src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                        alt=""><br>
+                    <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+                </div>
+            </div>
+        </div>
+        <div class="main_products">
+
+            <div class="products">
+                <div>
+                    <img width="70px"
+                        src="https://xstore4-qieiudwfys4jovetzvnw.stackpathdns.com/elementor/demos/electronics/wp-content/uploads/sites/49/2016/10/69-300x300.jpg"
+                        alt="">
+                </div>
+                <div style="color: black;">
+                    <p>DJI phantum 4</p>
+                    <img width="80px"
+                        src="https://previews.123rf.com/images/wetzkaz/wetzkaz1606/wetzkaz160600001/57672935-star-rating-zero-up-to-five.jpg?fj=1"
+                        alt=""><br>
+                    <i class="fa-solid fa-circle-0"></i><span>&#8377;</span>150.00</li>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+
+
+<div id="Browser_Activity">
+<h1 style="font-size: 50px; color: #00acc1;"><span style="color: #00acc1;">X</span>STORE</h1>
+<div class="New_Arrival">
+    <ul class="xstorelinks">
+        <li><a href="">About Us</a></li>
+        <li><a href="">Contact US</a></li>
+        <li><a href="">Delivery Info</a></li>
+        <li><a href="">Career</a></li>
+        <li><a href="">Terms of Use</a></li>
+    </ul>
+</div>
+</div>
+<hr style="width: 85vw;margin:auto;justify-self: center;">
+
+<div  class="textwidget">
+Copyright © 2021 <a href="https://xstore.8theme.com/">XStore Theme</a>. Created by 8theme - <a href="https://www.8theme.com/">Premium WooCommerce Themes</a>.
+</div>
+
+
+
+{% endblock body %}
