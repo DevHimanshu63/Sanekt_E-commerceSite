@@ -26,4 +26,4 @@ urlpatterns = [
     path('', include('SubApp.urls')),
     path('shop/',include('shop.urls'))
 
-]+ static(settings.MEDIA_URL,Document_root=settings.MEDIA_ROOT)
+]+ static(settings.MEDIA_URL, Document_root=settings.MEDIA_ROOT)
